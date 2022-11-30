@@ -1,0 +1,17 @@
+{
+  "players": [
+    "computer",
+    "user",
+    "computer"
+  ],
+  "cities": [
+    "Barcelona",
+    "Amsterdam",
+    "Madrid",
+    "Dubna",
+    "Moscow",
+    "Mexico",
+    "Saint-Petersburg",
+    "New-York"
+  ]
+}
