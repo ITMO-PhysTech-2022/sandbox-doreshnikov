@@ -1,0 +1,22 @@
+name: 'Test functions.py::mex/test_all'
+
+on:
+  pull_request:
+    types: [ opened, edited, synchronize ]
+    paths:
+      - 'tasks/ab/functions.py'
+      - 'test/ab/functions/test_mex.py'
+      - '.github/workflows/mex$all.yaml'
+  workflow_dispatch:
+
+jobs:
+  test_all:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pip install pytest
+      - run: pytest test/ab/functions/test_mex.py::TestMex::test_all
