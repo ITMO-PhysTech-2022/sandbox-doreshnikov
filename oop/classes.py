@@ -34,8 +34,6 @@ class SnakeIsDeadException(Exception):
 
 
 class Snake:
-    field = 'X'
-
     def __init__(self, name, field: Field):
         self.cells = [(0, 0)]
         self.name = name
